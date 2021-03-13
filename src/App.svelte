@@ -2,7 +2,7 @@
 <script>
   import { onMount, onDestroy } from "svelte";
 
-  const MARKET = "SUSHI-PERP";
+  const MARKET = "BTC-PERP";
 
   let socket = new WebSocket("wss://ftx.com/ws/");
   let price = 0;
