@@ -2,7 +2,7 @@
 <script>
   import { onMount, onDestroy } from "svelte";
 
-  const MARKET = "XLM-PERP";
+  const MARKET = "SUSHI-PERP";
 
   let socket = new WebSocket("wss://ftx.com/ws/");
   let price = 0;
@@ -63,7 +63,7 @@
     text-decoration: none;
     color: black;
   }
-  
+
   .App {
     font-family: "Courier New", Courier, monospace;
     font-size: 30px;
