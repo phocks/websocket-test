@@ -65,7 +65,7 @@
   }
 
   .App {
-    font-family: "Courier New", Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     display: flex;
     justify-content: center;
