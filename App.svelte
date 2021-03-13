@@ -53,12 +53,17 @@
 
 <div class="App">
   <div class="Container">
-    <div>{MARKET}</div>
+    <div><a href="https://ftx.com/trade/{MARKET}">{MARKET}</a></div>
     <div>${price}</div>
   </div>
 </div>
 
 <style>
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
   .App {
     font-family: "Courier New", Courier, monospace;
     font-size: 30px;
