@@ -1,11 +1,12 @@
 <!-- App.svelte -->
 <script>
   import { onMount, onDestroy } from "svelte";
+  import currency from "currency.js";
 
   const MARKET = "BTC-PERP";
 
   let socket = new WebSocket("wss://ftx.com/ws/");
-  let price = 0;
+  let price = "$0.0";
 
   onMount(async () => {
     socket.onopen = function (e) {
@@ -25,7 +26,7 @@
       const eventData = JSON.parse(event.data);
 
       if (eventData?.type === "update") {
-        price = eventData.data.last;
+        price = currency(eventData.data.last).format();
       }
     };
 
@@ -54,7 +55,7 @@
 <div class="App">
   <div class="Container">
     <div><a href="https://ftx.com/trade/{MARKET}">{MARKET}</a></div>
-    <div>${price}</div>
+    <div>{price}</div>
   </div>
 </div>
 

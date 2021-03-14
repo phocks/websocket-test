@@ -15,6 +15,7 @@
     "snowpack": "^3.0.13"
   },
   "dependencies": {
+    "currency.js": "^2.0.3",
     "svelte": "^3.35.0"
   }
 }
